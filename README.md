@@ -1,5 +1,5 @@
 # RoamingRolls
-A BJJ gym database build from scratch using the Wordpress CMS.
+A BJJ gym database build on a self made custom theme using the Wordpress CMS.
 
 This website has the following functionality:
 
