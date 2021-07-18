@@ -1,0 +1,3927 @@
+/*
+	
+		Theme Name: Roamingrolls
+		Text Domain: Roamingrolls
+		Version: 1.0
+		Description: Travel database
+		Tags: travel, reviews, database
+		Author: Peter McNulty
+		Author URI: https://roamingrolls.com 
+	
+	*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  font-family: arial;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+  #starts {
+    font-size: 20;
+  }
+
+  #title2 {
+    display: none !important;
+  }
+}
+
+#nav {
+  height: 80px;
+}
+
+#sidebarbtn {
+  margin-right: -2px;
+  background-image: linear-gradient(#0a0a23, #071a4b);
+  border: 1px solid white;
+}
+
+.btn {
+  height: 40px;
+}
+
+#title2 {
+  flex-grow: 1;
+  font-weight: bold;
+  line-height: 70px;
+  font-size: 150%;
+  color: white;
+  margin-left: 15px;
+  margin-top: -10px;
+}
+
+.navbar {
+  background-image: linear-gradient(#0a0a23, #071a4b);
+  height: 80px;
+  display: flex;
+}
+
+#right-nav {
+  display:flex;
+
+}
+
+.navWriting {
+  margin: 10px 30px;
+  font-weight:bold;
+  font-size:20px;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+}
+
+#sidebar {
+  width: 250px;
+  height: 90vh;
+  position: fixed;
+  top: 80px;
+  right: 0;
+  background-image: linear-gradient(to right, #333333, #505050);
+  color: #fff;
+  z-index: 999;
+  transition: all 0.3s;
+  margin-top: 0px;
+  z-index: -1;
+}
+
+#nav-contain {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-left: 20px;
+}
+
+.nav-item {
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.nav-sub-item {
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.nav-item:hover {
+  text-decoration: underline;
+}
+
+.nav-sub-item:hover {
+  text-decoration: underline;
+}
+
+.menu-item:hover {
+  text-decoration: underline;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  background-color: #333333;
+}
+
+#sidebar ul.components {
+  padding: 20px 0;
+  background-color: #333333;
+}
+
+#sidebar ul p {
+  color: #fff;
+  padding: 10px;
+}
+
+#sidebar ul p a:hover {
+  background-color: #081032;
+}
+
+#sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+  color: white;
+}
+#sidebar ul li a:hover {
+  background-color: #333333;
+  background: #333333;
+}
+
+#sidebar ul li.active > a,
+a[aria-expanded="true"] {
+  color: #fff;
+  background-color: #333333;
+}
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background-color: #333333;
+  color: white;
+}
+
+.spaceEven {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly !important;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  width: 50%;
+}
+
+.icons {
+  color: black;
+  margin: 20px 30px;
+  transition: all .2s ease-in-out;
+}
+
+.iconCon 
+{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.iconNote {
+  background-color:#071a4b;
+  color:white;
+  font-weight:bold;
+  opacity:0;
+  transition:all 0.2s linear;
+  padding:5px;
+  border-radius:3px;
+}
+
+.icons:hover {
+  transform:scale(1.2);
+}
+
+.facilityCheck {
+  display: none;
+}
+
+.fa {
+  color: #ad0e2c !important;
+}
+
+#sidebar {
+  margin-right: -250px;
+}
+#sidebar.active {
+  margin-right: 0;
+}
+
+a[data-toggle="collapse"] {
+  position: relative;
+  color: white !important;
+}
+
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.logo {
+  max-height: 70px;
+  width: auto;
+  margin: -8px 0px 0px 0px;
+  /* animation: spin 3s infinite linear; */
+}
+
+/* @keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+.jumbo1 {
+  background-image: url(https://roamingrolls.com/wp-content/uploads/2020/08/searchbackground2.png);
+  background-size: cover;
+  height: 100%;
+  margin-top:80px;
+}
+
+.jumbo2 {
+  margin-top: 420px;
+  background-color: white !important;
+  height:450px;
+}
+
+#addYourGym {
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+
+.addYourGymItem {
+  margin-top:40px;
+  margin-bottom:40px;
+}
+
+.jumbo3 {
+  background-image: url(https://roamingrolls.com/wp-content/uploads/2020/08/Untitled-design-21.png);
+  background-size: cover;
+}
+
+#budge {
+  height: 400px;
+}
+
+#but {
+  background-image: linear-gradient(#0a0a23, #071a4b);
+  color: white;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  width: 100px;
+  font-size: 30px;
+  line-height: 40px;
+  font-family: "Bebas Neue", cursive;
+}
+
+#but:hover {
+  background-image: linear-gradient(#160101, #940808);
+}
+
+#but2 {
+  background-image: linear-gradient(#0a0a23, #071a4b);
+  color: white;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  height: 50px;
+  width: 100px;
+  font-size: 30px;
+}
+
+#but3 {
+  background-image: linear-gradient(#0a0a23, #071a4b);
+  color: white;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  width: 120px;
+  font-size: 25px;
+  font-family: "Bebas Neue", cursive;
+}
+
+h1 {
+  color: #0a0a23;
+  font-family: "Bebas Neue", cursive;
+  font-size: 150%;
+}
+
+.container {
+  text-align: center;
+}
+
+#articles {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#atitle {
+  font-size: 50 !important;
+}
+
+.navbar-toggler {
+  margin-top: -15px;
+}
+
+.cardBody {
+  background-color: rgb(35, 36, 48);
+  color: white;
+}
+
+.card {
+  background-color: rgb(35, 36, 48) !important;
+  max-height: 300px;
+  max-width: 300px;
+  margin: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+  transition: all 0.5s;
+  margin-top: 20px;
+}
+
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card-img-top {
+  min-height: 200px;
+  min-width: 150px;
+  -webkit-filter: grayscale(0.5);
+  filter: grayscale(0.5);
+  transition: all 0.5s;
+}
+
+.article-card-body {
+  background-color: #f4f6fa;
+  display: flex;
+  height: auto;
+  text-align: center;
+}
+
+.cardImages {
+  min-height: 200px;
+  min-width: 150px;
+  -webkit-filter: grayscale(0.3);
+  filter: grayscale(0.3);
+  transition: all 0.5s;
+  height: 70%;
+  width: 100%;
+}
+
+.cardImages:hover {
+  -webkit-filter: grayscale(0);
+  filter: none;
+}
+
+.card-img {
+  min-height: 150px;
+  min-width: 150px;
+}
+/* 
+.article-blockers {	
+	background: rgba(0,0,0,.5);
+	height:60%;
+	width:100%;
+	position:absolute;
+	bottom:50%;
+} */
+
+.footer {
+  background-color: rgb(28, 29, 37);
+  margin-top: -40px;
+  color: white;
+}
+
+.content {
+  margin-top: 100px;
+}
+
+.sign_logo {
+  width: 150px;
+  height: auto;
+}
+
+.user_card {
+  height: 410px;
+  width: 350px;
+  margin-top: 50px;
+  margin-bottom: auto;
+  background: #071a4b;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 400px) {
+  .user_card {
+    max-width: 270px !important;
+    max-height: 330px;
+  }
+
+  .sign_logo {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    right: 5px;
+    bottom: 5px;
+  }
+
+  .brand_logo_container {
+    height: 130px !important;
+    width: 130px !important;
+  }
+
+  #loginform-custom {
+    position: relative;
+    margin-right: 33px;
+  }
+
+  .login-password {
+    margin-top: -10px;
+  }
+
+  .login-username {
+    margin-top: -10px;
+  }
+
+  .login-submit {
+    margin-top: -10px;
+  }
+
+  .login-remember {
+    margin-top: -10px;
+  }
+}
+
+#clicked {
+  display: none;
+}
+
+#signpop {
+  display: none;
+}
+
+#signpop.open {
+  display: inline;
+}
+
+.blocker {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#gymSuccessBlock {
+  z-index: 1;
+  display: none;
+}
+
+#gymSuccess {
+  position: absolute;
+  top: 35%;
+  width: 50%;
+  text-align: center;
+}
+
+#navHome {
+  position: absolute;
+  top: 50%;
+  background-image: linear-gradient(#0a0a23, #071a4b);
+  color: white;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 30px;
+  line-height: 30px;
+  font-family: "Bebas Neue", cursive;
+}
+
+#navHome:hover {
+  background-image: linear-gradient(#160101, #940808);
+}
+
+@media only screen and (max-width: 1000px) {
+  #gymSuccess {
+    width: 80%;
+  }
+}
+
+#blockSide {
+  z-index: -1;
+  background: none;
+  display: none;
+}
+
+.brand_logo_container {
+  position: relative;
+  height: 170px;
+  width: 170px;
+  top: -75px;
+  border-radius: 50%;
+  background: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.form_container {
+  margin-top: -50px;
+}
+
+.login_btn {
+  width: 100%;
+  background: #ad0e2c !important;
+  color: white !important;
+}
+.login_btn:focus {
+  color: white;
+  background-color: #75081c !important;
+}
+
+.fa-key {
+  background-color: #ad0e2c;
+}
+
+.input-group-text {
+  background-color: #ad0e2c !important;
+  color: white !important;
+  border: 0 !important;
+  border-radius: 0.25rem 0 0 0.25rem !important;
+}
+
+#f3box {
+  background-color: #1d4264 !important;
+  color: white !important;
+  border: 0 !important;
+  border-radius: 0.25rem 0 0 0.25rem !important;
+}
+
+.sign-icon {
+  background-color: #ad0e2c !important;
+  color: white !important;
+  border: 0 !important;
+  border-radius: 0.25rem 0 0 0.25rem !important;
+}
+
+.custom-control-label {
+  color: white;
+}
+
+.justify-content-center {
+  color: white;
+}
+
+#step1banner {
+  width: 100%;
+  height: 40px;
+  background-color: #ad0e2c;
+  color: white;
+  padding: 5px;
+  margin-top: 79px;
+}
+
+.steps {
+  font-size: 90%;
+  margin-bottom: -3px;
+}
+
+.main {
+  font-size: 120%;
+  font-weight: bold;
+}
+
+.titles {
+  color: #1f1f4b;
+  font-family: "Bebas Neue", cursive;
+  font-size: 50px;
+}
+
+#emailValidMsg {
+  width: 300px;
+  text-align: center;
+  display: none;
+}
+
+#phoneValidMsg {
+  width: 300px;
+  text-align: center;
+  margin-top: -20px;
+  display: none;
+}
+
+#fillFields {
+  width: 300px;
+  text-align: center;
+  margin-top: -20px;
+  display: none;
+}
+
+#gymNameInvalid {
+  display: none;
+}
+
+#mapValidMessage {
+  width: 300px;
+  text-align: center;
+  margin-top: -20px;
+  display: none;
+}
+
+#g-recaptcha-response {
+  display: none;
+}
+
+.forms {
+  background-image: linear-gradient(#c1c1c4, #aabff5);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+#flags {
+  height: 20px;
+  width: 30px;
+}
+
+@media only screen and (max-width: 400px) {
+  .forms {
+    max-width: 350px !important;
+    max-height: auto !important;
+  }
+}
+
+#form1 {
+  position: relative;
+  right: 1400px;
+  transition: transform 0.4s linear;
+  transform: translateY(0px);
+  will-change: transform;
+  margin-bottom: 30px;
+  margin-top: -50px;
+}
+
+.gymsug {
+  text-align: center;
+}
+
+#form2 {
+  position: relative;
+  right: 1400px;
+  transition: transform 0.4s linear;
+  transform: translateY(0px);
+  will-change: transform;
+  margin-top: 30px;
+}
+
+#callCode {
+  margin-right: 20px;
+  height: 39px;
+  border-radius: 5px;
+}
+
+#phone {
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin-left: 10px;
+}
+
+#btnsub1d {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+#btnsub1 {
+  flex-grow: 0.1;
+  margin-bottom: 20px;
+  background-image: linear-gradient(#0a0a23, #071a4b);
+  color: white;
+  font-size: 20;
+}
+
+#btnfile {
+  flex-grow: 0.1;
+
+  background-color: #1d4264;
+  color: white;
+  font-size: 20;
+}
+
+#btnfile:hover {
+  background-color: #12283d;
+}
+
+#btnfile2 {
+  flex-grow: 0.1;
+  background-color: #1d4264;
+  color: white;
+  font-size: 20;
+}
+
+#btnfile2:hover {
+  background-color: #12283d;
+  outline: white;
+}
+
+#btnfile3 {
+  flex-grow: 0.1;
+  background-color: #1d4264;
+  color: white;
+  font-size: 20;
+}
+
+#btnfile3:hover {
+  background-color: #12283d;
+}
+
+#image_preview {
+  margin-bottom: 20px;
+}
+
+#PriceCardCon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+@media only screen and (max-width: 700px) {
+  #PriceCardCon {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .adultcard {
+    width: 400px !important;
+    margin-left: 20px !important;
+  }
+
+  .adults {
+    width: 400px !important;
+  }
+
+  .children {
+    width: 400px !important;
+  }
+
+  .adultin {
+    max-width: 380px !important;
+    width: 380px !important;
+  }
+
+  .priceDesIn {
+    max-width: 380px !important;
+    width: 380px !important;
+  }
+
+  .priceDesOut {
+    max-width: 380px !important;
+    width: 380px !important;
+    overflow: none;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #PriceCardCon {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .adultcard {
+    width: 250px !important;
+    margin-left: 20px !important;
+  }
+
+  .adults {
+    width: 250px !important;
+  }
+
+  .children {
+    width: 250px !important;
+  }
+
+  .adultin {
+    max-width: 230px !important;
+    width: 230px !important;
+  }
+
+  .priceDesIn {
+    max-width: 230px !important;
+    width: 230px !important;
+  }
+
+  .priceDesOut {
+    max-width: 230px !important;
+    width: 230px !important;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  #PriceCardCon {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+.adultcard {
+  background-color: rgb(229, 233, 245);
+  border: none;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+  padding: 10px;
+  width: 300px;
+  height: 200px;
+  border-radius: 2px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.titleinputs {
+  width: 40% !important;
+  height: 30px !important;
+  background-color: #e5e9f5;
+  border: none;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 3px;
+  line-height: 30px;
+}
+
+.priceOut {
+  width: 40% !important;
+  height: 30px !important;
+  background-color: #e5e9f5;
+  border: none;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 3px;
+  line-height: 30px;
+  overflow: none;
+}
+
+.priceIn {
+  width: 40% !important;
+  height: 30px !important;
+  background-color: #e5e9f5;
+  border: none;
+  color: #333333;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 3px;
+  line-height: 30px;
+  display: none;
+}
+
+.Options {
+  margin-top: 7px;
+  color: rgb(32, 32, 32);
+  line-height: 30px;
+}
+
+.titleinputs:focus {
+  outline: none;
+}
+
+.adultin {
+  color: rgb(12, 6, 6);
+  background-color: rgb(229, 233, 245);
+  border: none;
+  border-radius: 2px;
+  width: 280px;
+  height: 130px;
+  position: relative;
+  text-align: center;
+  display: table-cell;
+  justify-content: center;
+  vertical-align: middle;
+  max-width: 280px;
+  font-weight: bold;
+}
+
+.PriceDesIn {
+  color: #333333;
+  background-color: rgb(229, 233, 245);
+  border: none;
+  border-radius: 2px;
+  width: 280px;
+  height: 130px;
+  position: relative;
+  text-align: center;
+  display: table-cell;
+  justify-content: center;
+  vertical-align: middle;
+  max-width: 280px;
+  font-weight: bold;
+  display: none;
+}
+
+.PriceDesOut {
+  color: rgb(12, 6, 6);
+  background-color: rgb(229, 233, 245);
+  border: none;
+  border-radius: 2px;
+  width: 280px;
+  height: 130px;
+  position: relative;
+  text-align: center;
+  max-width: 280px;
+  font-weight: bold;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+.adultin:focus {
+  outline: none;
+}
+
+.priceDesIn:focus {
+  outline: none;
+}
+
+#extra {
+  margin-top: 10px;
+  height: 140px;
+  overflow-y: auto;
+}
+
+.adults {
+  background-color: #1b2442;
+  width: 107%;
+  position: relative;
+  right: 10px;
+  bottom: 10px;
+  height: 50px;
+  border-radius: 2px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  line-height: 50px;
+  align-items: center;
+}
+
+.adultcontain {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  align-items: center;
+}
+
+#table-card {
+  margin-top: 20px;
+}
+
+.scheduleup {
+  margin-top: 10px;
+}
+
+#schedulein {
+  background-color: rgb(234, 236, 245);
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding: 10px;
+  border-radius: 10px;
+  overflow: auto;
+  max-height: 400px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  max-width: 70%;
+}
+
+#schedule-container {
+  display: flex;
+  justify-content: center;
+}
+
+.Rowin {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  white-space: nowrap;
+  width: 1000px;
+  overflow-y: visible;
+}
+
+#contain {
+  overflow-y: visible;
+}
+
+.plusevent {
+  width: 35px;
+  height: 35px;
+  border-radius: 17.5px;
+  background-color: rgb(93, 73, 112);
+  border: none;
+  margin-left: 30px;
+}
+
+.minusInstructor {
+  width: 35px;
+  height: 35px;
+  border-radius: 17.5px;
+  background-color: rgb(133, 2, 2);
+  border: none;
+  position: absolute;
+  margin-left: 330px;
+  margin-top: -20px;
+}
+
+#minusInstructor {
+  display: none;
+}
+
+.plusPic {
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  background-color: rgb(24, 18, 77);
+  border: none;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.linkFBCon {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  height: 30px;
+}
+
+.topIcon {
+  margin: 0 10px;
+}
+
+#picPlusCon {
+  width: 100%;
+  position: absolute;
+  bottom: 330px;
+  right: 45px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.plusPic:hover {
+  background-color: rgb(59, 54, 107);
+}
+
+#minusEvent1 {
+  color: white;
+}
+
+.minusEvent:hover {
+  background-color: rgb(87, 27, 143);
+}
+
+.minusEvent:focus {
+  outline: 0;
+}
+
+.fa-minus-circle {
+  color: white;
+}
+
+.fa-plus-circle {
+  color: white;
+}
+
+.plusevent:hover {
+  background-color: rgb(87, 27, 143);
+}
+.plusevent:focus {
+  outline: 0;
+}
+
+.eventcopy {
+  border: none;
+  background-color: rgb(87, 27, 156);
+  color: white;
+  padding: 10px;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 30px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  overflow: visible;
+}
+
+.multiselect {
+  width: 160px;
+  margin-top: 5px;
+}
+
+.selectBox {
+  position: relative;
+}
+
+.selectBox select {
+  width: 100%;
+  font-weight: bold;
+}
+
+.overSelect {
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.repeat {
+  width: 60px;
+}
+.fa-sort-down:hover {
+  color: yellow;
+}
+
+.repeat:hover {
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+#checkboxes1 {
+  display: none;
+  border: 1px #dadada solid;
+  position: relative;
+  background-color: #571b9c;
+  width: 140px;
+  border-radius: 5px;
+}
+
+#checkboxes1 label {
+  display: block;
+  color: white;
+}
+
+#checkboxes1 label:hover {
+  background-color: #6b4696;
+}
+
+#checkboxes2 {
+  display: none;
+  border: 1px #dadada solid;
+  position: relative;
+  background-color: rgb(160, 7, 7);
+  width: 140px;
+  border-radius: 5px;
+}
+
+#checkboxes2 label {
+  display: block;
+  color: white;
+}
+
+#checkboxes2 label:hover {
+  background-color: rgb(179, 20, 20);
+}
+
+#checkboxes3 {
+  display: none;
+  border: 1px #dadada solid;
+  position: relative;
+  background-color: rgb(228, 153, 13);
+  width: 140px;
+  border-radius: 5px;
+}
+
+#checkboxes3 label {
+  display: block;
+  color: white;
+}
+
+#checkboxes3 label:hover {
+  background-color: rgb(233, 188, 40);
+}
+
+#checkboxes4 {
+  display: none;
+  border: 1px #dadada solid;
+  position: relative;
+  background-color: rgb(21, 21, 128);
+  width: 140px;
+  border-radius: 5px;
+}
+
+#checkboxes4 label {
+  display: block;
+  color: white;
+}
+
+#checkboxes4 label:hover {
+  background-color: rgb(27, 27, 155);
+}
+
+#checkboxes5 {
+  display: none;
+  border: 1px #dadada solid;
+  position: relative;
+  background-color: rgb(10, 95, 10);
+  width: 140px;
+  border-radius: 5px;
+}
+
+#checkboxes5 label {
+  display: block;
+  color: white;
+}
+
+#checkboxes5 label:hover {
+  background-color: rgb(20, 116, 20);
+}
+
+#event2 {
+  background-color: rgb(160, 7, 7) !important;
+}
+
+#event3 {
+  background-color: rgb(228, 153, 13) !important;
+}
+#event4 {
+  background-color: rgb(21, 21, 128) !important;
+}
+#event5 {
+  background-color: rgb(10, 95, 10) !important;
+}
+
+.days {
+  margin-right: 10px;
+}
+
+#checkboxes1 label:hover {
+  background-color: #6b4696;
+}
+
+.inputs {
+  color: rgb(12, 6, 6);
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  width: 160px;
+  height: 25px;
+}
+
+.eventin:active {
+  border: none;
+}
+
+br {
+  margin-left: 20px;
+}
+
+h3 {
+  color: #0a0a23;
+  font-family: Arial;
+  font-size: 125%;
+}
+
+.inlabel {
+  margin-left: 15px;
+  height: 37px;
+  font-size: 20;
+  line-height: 15px;
+  color: white;
+  background-color: #1d4264;
+}
+
+#adult {
+  min-height: 90px;
+  resize: none;
+}
+
+#child {
+  min-height: 90px;
+  resize: none;
+}
+
+/* map stuff */
+
+#mapContain {
+  position: relative;
+  width: 100%;
+  max-height: 80%;
+}
+
+#embeddedMapContain {
+  position: fixed;
+  top: 100px;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 50px;
+  display: none;
+}
+
+.embeddedMapContain
+{
+  position: fixed;
+  top: 100px;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 50px;
+  display: none;
+}
+
+.mapcenter {
+  display: flex !important;
+  justify-content: center !important;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+#map {
+  position: relative;
+  margin-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-y: hidden;
+}
+
+#embeddedMap {
+  height: 70%;
+  position: relative;
+  margin-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-y: hidden;
+}
+
+#mapID {
+  display: none;
+}
+
+#description {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+#infowindow-content .title {
+  font-weight: bold;
+}
+
+#infowindow-content {
+  display: none;
+}
+
+#map #infowindow-content {
+  display: inline;
+}
+
+.pac-card {
+  margin: 10px 10px 0 0;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  font-family: Roboto;
+  display: inline-block;
+}
+
+.pac-controls {
+  display: inline-block;
+  padding: 5px 11px;
+}
+
+.pac-controls label {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+#pac-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  padding: 5px;
+  text-overflow: ellipsis;
+  width: 300px;
+  height: 40px;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+}
+
+#title {
+  color: #fff;
+  background-color: #4d90fe;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 2px;
+}
+
+#image_preview {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.uploadedimages {
+  max-height: 100px;
+  max-width: auto;
+  margin: 5px;
+  border-radius: 3px;
+}
+
+/* gym archive */
+
+#gymCards {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 110%;
+  display: flex;
+  justify-content:flex-start!important;
+  align-items: center;
+  /* background-image: linear-gradient(to bottom right, #c7daec, #f3f4f5); */
+  background-color: #12283d;
+  color: white;
+  border-radius: 3px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  min-height: 300px;
+  padding: 20px;
+}
+
+#gymCardTitle {
+  color: rgb(218, 214, 25);
+}
+
+#readMore
+{
+  color: rgb(218, 214, 25);
+
+}
+
+.gymCardFW
+{
+  margin-top:20px;
+  margin-left:-5px;
+}
+
+.markers {
+  cursor:pointer;
+}
+
+#GCCTitle
+{
+  color: rgb(218, 214, 25);
+
+}
+
+
+.thumbnails {
+  border-radius: 3px;
+  width: 250px;
+  height: 250px;
+  margin-left: -1px;
+}
+
+#gymCardClasses
+{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  position:relative;
+  left:20px;
+  height:100%;
+  padding:10px;
+}
+
+@media only screen and (max-width: 700px) {
+  #gymCards {
+    flex-direction: column;
+    max-height: 800px;
+    width: 400px;
+  }
+
+  .gymInfo {
+    left: 5px;
+  }
+
+  .thumbnails {
+    width: 200px;
+    border-radius: 10px 10px 0px 0px;
+    height: 200px;
+    margin-top: -5px;
+    margin-bottom: 5px;
+  }
+
+  #gymCardClasses
+{
+  display:block !important;
+  align-items:center;
+  text-align:center;
+  margin-right:40px;
+}
+}
+
+@media only screen and (max-width: 400px) {
+  #gymCards {
+    flex-direction: column;
+    height: 800px;
+    width: 270px;
+  }
+
+  .thumbnails {
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    height: 200px;
+  }
+
+  .intro {
+    max-width: 350px;
+    max-height: 30px;
+    overflow: hidden;
+  }
+
+  #gymCardClasses
+{
+  display:block !important;
+  align-items:center;
+  text-align:center;
+  width:100%;
+}
+}
+
+.gymInfo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-right:1px solid white;
+  border-left:1px solid white;
+  padding:10px;
+  left:20px;
+  height:100%;
+}
+
+
+
+#search {
+  text-align: center;
+  width: 600px !important;
+  height: 40px;
+  margin-top: 20px;
+}
+
+#searchRules {
+  position: relative;
+  top: 50px;
+  width: 400px;
+  text-align: center;
+  margin: auto;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.intro {
+  max-width: 350px;
+  max-height: 70px;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 900px) {
+  #search {
+    width: 300px !important;
+  }
+
+  #searchRules {
+    width: 300px !important;
+  }
+
+
+
+  .gymInfo {
+    border-right:none;
+    border-left:none;
+    left:0px;
+  }
+
+  .gymCards
+  {
+    width:100%;
+
+  }
+
+  #gymCardClasses{
+    display:none;
+  }
+
+  
+}
+
+#searchBarContainer {
+  position: relative;
+  top: 100px;
+  margin-bottom: 50px;
+}
+
+.title {
+  color: #0a0a23;
+  font-family: "Bebas Neue", cursive;
+}
+
+#noGyms {
+  margin-top: 10%;
+  margin-bottom: 30%;
+  text-align: center;
+}
+
+.fa-sad-tear {
+  color: #081947;
+}
+
+/* Gym page */
+
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+}
+
+/* Slideshow container */
+
+#slideFormInput {
+  height: 100px;
+  width: 300px;
+  text-align: justify;
+  word-wrap: break-word;
+}
+
+.carousel-item {
+  max-height: 600px;
+  max-width: auto;
+}
+
+.carousel-inner {
+  width: 100% !important;
+  max-height: 600px;
+}
+
+.slideImg {
+  max-height: 600px;
+  width: 100%;
+}
+
+#facebookIcon {
+  color: #1f1f4b;
+}
+
+#phoneIcon {
+  color: #1d752a;
+  margin-right: 5px;
+}
+
+#emailIcon {
+  margin-right: 5px;
+  margin-left: 10px;
+}
+
+#phoneInput {
+  display: none;
+}
+
+#emailInput {
+  display: none;
+}
+
+.tooltiptext {
+  background-color: #263252;
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+  line-height: 25px;
+  height: 60px;
+  position: absolute;
+  transition: all 0.5s;
+  text-align: center;
+  margin-top: 35px;
+}
+
+#phoneTip {
+  right: 50px;
+  max-width: 170px;
+  opacity: 0;
+}
+
+#emailTip {
+  right: 10px;
+  max-width: 250px;
+  opacity: 0;
+}
+
+#facebookSideIcon {
+  color: #1f1f4b;
+  margin-right: 50px;
+}
+
+#instagramIcon {
+  margin-left: 40px;
+  width: 40px !important;
+  height: 40px !important;
+}
+
+#socialMediaCon {
+  width: 100%;
+  background-image: linear-gradient(to right, #add2ef, #b9d8f0);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#slideshow-container {
+  width: 60%;
+  height: 80%;
+  position: fixed;
+  top: 100px;
+  margin-bottom: 100px;
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  #slideshow-container {
+    width: 90%;
+  }
+
+  .tooltiptext {
+    margin-top: 65px;
+  }
+
+  #websiteIcon {
+    margin-top: 5px;
+  }
+
+  #facebookIcon {
+    margin-top: 5px;
+    margin-right: 6px;
+  }
+}
+
+#savePics {
+  position: absolute;
+  top: 350px;
+  right: 100px;
+  color: white;
+  width: 50px;
+  display: none;
+}
+
+#cancelPics {
+  position: absolute;
+  top: 350px;
+  right: 30px;
+  color: white;
+  width: 60px;
+  background-color: #ad0e2c;
+  display: none;
+}
+
+#cancelPics:hover {
+  background-color: #aa344a;
+}
+
+#slideBlock {
+  justify-content: center;
+}
+
+.slideimg {
+  width: 100%;
+  max-height: 600px;
+  z-index: -1;
+}
+
+.myslideD {
+  overflow-y: hidden;
+  max-height: 500px;
+  min-height: 300px;
+  width: 80%;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: -1;
+}
+
+#logo-pic {
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -200px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: absolute;
+}
+
+#logoImg {
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+}
+
+#logoPicup {
+  position: relative;
+  left: 210px;
+  bottom: 70px;
+  z-index:100;
+
+}
+
+#saveLogoPic {
+  position: absolute;
+  top: 150px;
+  left: 120px;
+  color: white;
+  width: 50px;
+  display: none;
+  z-index:100;
+}
+
+#cancelLogoPic {
+  position: absolute;
+  top: 150px;
+  left: 180px;
+  color: white;
+  width: 60px;
+  background-color: #ad0e2c;
+  display: none;
+  z-index:100;
+
+}
+
+#cancelLogoPic:hover {
+  background-color: #b91e3b;
+}
+
+#gymTitle {
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
+#imgRules {
+  max-width: 230px;
+  height: 250px;
+  text-align: center;
+  position: absolute;
+  margin-left: 80%;
+  top: 100px;
+  bottom: 350px;
+  background-color: #263252;
+  border-radius: 40%;
+  padding: 10px;
+  color: rgb(252, 250, 244);
+  transition: opacity 0.3s linear;
+  opacity: 0;
+  z-index: -1;
+}
+
+.instructorRules {
+  max-width: 170px;
+  text-align: center;
+  position: absolute;
+  background-color: #263252;
+  border-radius: 10px;
+  padding: 10px;
+  color: rgb(252, 250, 244);
+  transition: opacity 0.3s linear;
+  opacity: 0;
+  line-height: 100%;
+}
+
+#instructorRulePlus {
+  margin-left: 25%;
+  z-index: -1;
+  margin-top: -130px;
+}
+
+@media only screen and (max-width: 1200px) {
+  #instructorRulePlus {
+    margin-left: 15%;
+    z-index: -1;
+    margin-top: -130px;
+  }
+}
+
+#instructorRuleMinus {
+  margin-left: 63%;
+  z-index: -1;
+  margin-top: -130px;
+}
+
+.rulesTriangle {
+  width: 50px;
+  height: 50px;
+  background-color: #263252;
+  position: absolute;
+  left: 135px;
+  bottom: 10px;
+  z-index: -1;
+}
+
+#priceRules {
+  width: 200px;
+  text-align: center;
+  position: absolute;
+  margin-top: -150px;
+  background-color: #263252;
+  border-radius: 40%;
+  padding: 10px;
+  color: rgb(252, 250, 244);
+  transition: opacity 0.3s linear;
+  opacity: 0;
+}
+
+.priceRulesTriangle {
+  width: 50px;
+  height: 50px;
+  background-color: #263252;
+  position: absolute;
+  left: 145px;
+  bottom: 10px;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 400px) {
+  #imgRules {
+    margin-left: 23%;
+  }
+
+  #priceRules {
+    left: 90px;
+    margin-top: -140px;
+    height: 200px;
+    width: 50%;
+  }
+
+  .priceRulesTriangle {
+    left: 60%;
+    bottom: 20px;
+  }
+
+  #instructorRulePlus {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 600px) {
+  #imgRules {
+    margin-left: 23%;
+  }
+
+  #priceRules {
+    left: 120px;
+    margin-top: -140px;
+    height: 200px;
+    width: 50%;
+  }
+  #instructorRulePlus {
+    margin-left: 3%;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 800px) {
+  #imgRules {
+    margin-left: 55%;
+  }
+
+  #priceRules {
+    margin-left: 33%;
+    margin-top: -80px;
+    height: 150px;
+    width: 300px !important;
+  }
+
+  .priceRulesTriangle {
+    left: 245px;
+    bottom: 20px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+  #imgRules {
+    margin-left: 65%;
+  }
+
+  #priceRules {
+    margin-left: 60%;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  #imgRules {
+    margin-left: 70%;
+  }
+
+  #priceRules {
+    margin-left: 65%;
+  }
+}
+
+#street {
+  margin-left: 5px;
+}
+
+#gymLocation {
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+.fa-map-marker-alt {
+  float: left;
+  margin-bottom: 20px;
+  margin-right: 5px;
+}
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.flex-item1 {
+  width: 300px;
+}
+
+.flex-item2 {
+  margin-right: 10px;
+}
+
+.flex-item2 {
+  margin-right: 10px;
+  flex-grow: 0.5;
+}
+
+#displayImg {
+  display: block;
+  max-height: 800px;
+  min-height: 300px;
+  width: 100%;
+  cursor: pointer;
+  z-index: -1;
+}
+
+#pageSectionMenu {
+  height: 50px;
+  margin-bottom: 20px;
+  line-height: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.menuContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.center {
+  display: flex !important;
+  justify-content: center !important;
+  margin-bottom: 10px;
+  width: 100%;
+  height: auto;
+}
+
+#pageTab1 {
+  border-left: none;
+}
+
+.fa-edit {
+  color: white;
+}
+
+.pageSecLinks {
+  color: white;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.pageSecLinks:hover {
+  text-decoration: none;
+}
+
+.pageSecTab {
+  line-height: 50px;
+  color: white;
+  font-weight: bold;
+  font-size: 17px;
+  height: 50px;
+  border-left: none;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+  background-color:#12283D;
+  margin-top: 5px;
+  text-align: center;
+  width: 100%;
+  transition: all 0.5s;
+}
+
+#gymDesIn {
+  width: 500px;
+  display: none;
+  border-radius: 5px;
+  height: 100px;
+  resize: none;
+}
+
+.bottomLine {
+  height: 5px;
+  background-color: #CDAF23;
+  width: 0%;
+  position: absolute;
+  transition: all 0.5s;
+  margin-top: -6px;
+  margin-left: -6px;
+}
+
+@media only screen and (max-width: 700px) {
+  #gymDesIn {
+    width: 300px;
+  }
+}
+
+.gymSubs {
+  background-image: linear-gradient(#030318, #071a4b);
+  color: white;
+  border-radius: 3px;
+  border: none;
+}
+
+#instructSub {
+  margin-bottom: 20px;
+  width: 70px;
+  height: 30px;
+  display: none;
+}
+
+#instructCan {
+  margin-bottom: 20px;
+  width: 70px;
+  height: 30px;
+  margin-left: 20px;
+  display: none;
+}
+
+.cancels {
+  background-image: linear-gradient(#160101, #940808);
+  color: white;
+  border-radius: 2px;
+  border: none;
+}
+
+.gymSubs:hover {
+  background-image: linear-gradient(#160101, #940808);
+}
+
+.cancels:hover {
+  background-image: linear-gradient(#030318, #071a4b);
+}
+
+#desAlert {
+  display: none;
+}
+
+#gymDesSub {
+  display: none;
+}
+
+#cancel1 {
+  display: none;
+  margin-left: 20px;
+}
+
+@media only screen and (max-width: 400px) {
+  .pageSecTab {
+    font-size: 14px;
+  }
+
+  #gymDesout {
+    max-width: 350px;
+  }
+}
+
+#gymDesout {
+  max-height: 100px;
+  max-width: 900px;
+  text-align: center;
+  word-wrap: break-word;
+  overflow-y: hidden;
+}
+
+#readLess2 {
+  display: none;
+}
+
+#more {
+  display: none;
+}
+
+.readButtons {
+  border: none;
+  background-color: white;
+  font-weight: bold;
+  color: rgb(114, 113, 146);
+}
+
+#inHeadOne {
+  height: 102%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#prices {
+  margin-bottom: 30px;
+}
+
+.porspagebtn {
+  border: none;
+  background-color: #ffffe7;
+  border-radius: 5px;
+}
+
+.porslink {
+  color: rgb(89, 87, 128);
+}
+
+.porslink:hover {
+  color: rgb(101, 96, 189);
+}
+
+.fullCenter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .fullCenter {
+    justify-content: center;
+  }
+}
+
+.fImage {
+  max-height: 400px;
+}
+
+.inAccord {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border-radius: 2px;
+  position: relative;
+}
+
+.inCard {
+  width: 300px;
+  position: relative;
+}
+
+@media only screen and (max-width: 600px) {
+  .inCard {
+    width: 280px;
+    position: relative;
+  }
+}
+
+.inpic {
+  height: 300px;
+  position: relative;
+  top: 10px;
+}
+
+#imageUpload0 {
+  display: none;
+}
+
+#imageUpload1 {
+  display: none;
+}
+
+#imageUpload2 {
+  display: none;
+}
+
+#imageUpload3 {
+  display: none;
+}
+
+#imageUpload4 {
+  display: none;
+}
+
+.inup {
+  position: absolute;
+  right: 30px;
+  top: 190px;
+  width: 30px;
+  height: 30px;
+  border-radius: 2px;
+  background-color: rgb(27, 36, 66);
+  display: none;
+}
+
+.fa-file-upload {
+  color: white;
+}
+
+.inup:hover {
+  background-color: rgb(52, 60, 85);
+}
+
+.card-header {
+  background-color: rgb(27, 36, 66) !important;
+  border-radius: 3px !important;
+  display: flex !important;
+  justify-content: center !important;
+  margin-bottom: 5px !important;
+}
+
+#instructorForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly !important;
+  width: 70%;
+  flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 1200px) {
+  #instructorForm {
+    width: 90%;
+  }
+}
+
+#editInstruct {
+  margin-left: 80%;
+}
+
+#editPricing {
+  margin-left: 80%;
+}
+
+#editChecks {
+  margin-left: 80%;
+}
+
+.checksIn {
+  display: none;
+}
+
+#editSchedule {
+  margin-left: 80%;
+}
+
+#priceSub {
+  margin-right: 10px;
+  display: none;
+}
+
+#scheduleSub {
+  margin-right: 10px;
+  display: none;
+}
+#scheduleCan {
+  margin-right: 10px;
+  display: none;
+}
+
+#scheduleP {
+  margin-top: 20px;
+}
+
+#fullPrice {
+  display: none;
+  margin-top: 20px;
+}
+
+#checksSub {
+  margin-right: 10px;
+}
+
+#checksCan {
+  margin-left: 10px;
+}
+
+#otherOut {
+  margin-bottom: 30px;
+  width: 80%;
+  text-align: center;
+}
+
+#scheduleCan {
+  margin-right: 10px;
+  display: none;
+}
+
+.scheduleIn {
+  display: none;
+}
+
+.scheduleEdit {
+  display: none !important;
+}
+
+#classesContain {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.classText
+{
+  display:none;
+}
+
+.classes {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.classesCheck {
+  display: none;
+}
+
+.fa-check-circle {
+  color: #1d752a;
+}
+
+.fa-times-circle {
+  color: #75081c;
+}
+
+#priceAlert {
+  display: none;
+  width: 60%;
+  text-align: center;
+}
+
+#priceLink {
+  display: none;
+  text-align: center;
+}
+
+#priceLinkOut {
+  height: 35px;
+  line-height: 35px;
+  font-size: 20px;
+  font-family: "Bebas Neue", cursive;
+}
+
+#scheduleLinkOut {
+  height: 35px;
+  line-height: 35px;
+  font-size: 20px;
+  font-family: "Bebas Neue", cursive;
+}
+
+#scheduleLinkIn {
+  display: none;
+  text-align: center;
+}
+
+#priceCan {
+  margin-left: 10px;
+  display: none;
+}
+
+#class {
+  display: none;
+}
+
+#day {
+  display: none;
+}
+
+#week {
+  display: none;
+}
+
+.eighty {
+  width: 80%;
+  margin: 100px auto;
+}
+
+#facilityCards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly !important;
+  width: 90%;
+  flex-wrap: wrap;
+}
+
+.facAccord {
+  justify-content: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border-radius: 2px;
+}
+
+.facCard2 {
+  width: 320px;
+}
+
+.instruct-card {
+  background-color: #12283D!important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  max-height: 330px !important;
+  width: 300px;
+  align-items: center;
+  border-radius: 3px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media only screen and (max-width: 600px) {
+  .instruct-card {
+    max-height: 330px !important;
+    width: 280px;
+  }
+}
+
+#instructors2 {
+  margin-top: 30px;
+  border-radius: 5px;
+}
+
+.titleUp {
+  display: none;
+}
+
+.InImage {
+  height: 260px;
+  max-width: 300px;
+  min-width: 300px;
+  border-radius: 2px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .InImage {
+    height: 240px;
+    max-width: 280px;
+    min-width: 280px;
+    margin-top: -7px;
+    border-radius: 2px;
+    margin-bottom: 10px;
+  }
+}
+
+.InName {
+  display: flex;
+  justify-content: center;
+}
+
+#plusInstructor {
+  margin-left: 0px;
+  display: none;
+}
+
+.minusInstructor {
+  display: none;
+}
+
+#inpm {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.beltLevelUp {
+  display: none;
+}
+
+
+
+.checkConCon {
+  display: flex;
+  flex-direction: row;
+}
+
+.buttonContain {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .buttonContain {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+}
+.inbtn {
+  margin-top: 14px;
+}
+
+.cAndTContainer {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  line-height: 40px;
+  margin-bottom: 5px;
+}
+
+.TContainer {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  line-height: 40px;
+}
+
+.drop {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-top: -20px;
+}
+
+.card {
+  position: relative;
+  top: 2px;
+}
+
+.btn-link {
+  color: white !important;
+  width: 50%;
+  height: 50%;
+}
+
+.btn-link:active {
+  outline: none !important;
+  border: none !important;
+  text-decoration: none !important;
+}
+
+#plusFacility {
+  margin-left: 0px;
+}
+
+.desIn {
+  flex-grow: 1 !important;
+  border-radius: 3px !important;
+  height: 180px;
+  background-color: #e5e9f5;
+  outline: none;
+  border: none;
+  text-align: center;
+  display: none;
+}
+
+.card-body {
+  background-color: #e5e9f5;
+  display: flex;
+  position: relative;
+  text-align:center;
+  max-height: 250px;
+  width: 300px;
+  display: flex !important;
+  justify-content: center !important;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+@media only screen and (max-width: 600px) {
+  .card-body {
+    width: 280px;
+  }
+}
+
+.article-card-body {
+  background-color: #f4f6fa;
+  display: flex;
+  height: auto;
+  text-align: center;
+}
+
+.titIn {
+  border-radius: 3px;
+  border: none;
+  background-color: #e5e9f5;
+  color: rgb(10, 1, 1);
+  font-weight: bold;
+  height: 60%;
+  width: 40%;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 10px;
+  display: none;
+}
+
+.titOut {
+  border-radius: 3px;
+  border: none;
+  background-color: #e5e9f5;
+  color: rgb(10, 1, 1);
+  font-weight: bold;
+  max-height: 60px;
+  width: 50%;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 10px;
+  line-height: 30px;
+  position: relative;
+  bottom: 5px;
+}
+
+.drop {
+  float: left;
+  margin-bottom: -20px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.beltLabel {
+  color: white;
+  float: left;
+  position: relative;
+  bottom: 10px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.beltLevelIn {
+  float: left;
+  border-radius: 2px;
+  background-color: #e5e9f5;
+  display: none;
+}
+
+.beltLevelOut {
+  float: left;
+  border-radius: 2px;
+  background-color: #e5e9f5;
+  position: relative;
+  font-weight: bold;
+  height: 30px;
+  line-height: 30px;
+  width: 60px;
+  text-align: center;
+  bottom: 5px;
+}
+
+.titin:focus {
+  outline: none;
+}
+
+#fac {
+  margin-top: 40px;
+}
+
+#schedulet {
+  margin-top: 40px;
+}
+
+#beltLevel {
+  display: block;
+}
+
+.form-check-label {
+  font-weight: bold;
+  color: #081640 !important;
+}
+
+.form-control {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+.price-check-label {
+  font-weight: bold;
+  color: black !important;
+}
+
+#giPriceIn {
+  text-align: center;
+  font-weight: bold;
+}
+
+#checkcon {
+  width: 10%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+
+/* .bodyContain {
+		background-color:#fdfdef;
+		width:100%;
+		margin-bottom:50px;
+	}
+
+	.bodyPerim {
+		background-color:#fdfdef;
+		display:flex;
+		justify-content:center;
+		
+	}
+	
+	.headContain {
+		background-color:#fdfdef;
+	} */
+
+#facilityIcons {
+  margin-top: -50px;
+}
+
+#facilitiesPlusClasses {
+  display: flex;
+  flex-direction: row;
+}
+
+.checkbox-grid {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.checkbox-grid div {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+
+.checkbox-grid label {
+  position: relative;
+  bottom: 5px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+#other {
+  width: 50%;
+  height: 100px;
+  margin-top: 30px;
+  display: none;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.facilityI {
+  flex-grow: 1;
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
+}
+
+#gymDelete {
+  margin-bottom: 50px;
+  height: 50px;
+  width: 150px;
+  line-height: 50px;
+  font-size: 30px;
+  font-family: "Bebas Neue", cursive;
+  background-image: linear-gradient(#160101, #940808);
+}
+#gymDelete:hover {
+  background-image: linear-gradient(#0a0a23, #071a4b);
+}
+
+#hiddenDeleteButton2 {
+  display: none;
+}
+
+/* Article styling */
+
+.aTitleCenter {
+  text-align: center;
+}
+
+/* Article styling end */
+
+/* Profile*/
+
+#coverPhoto {
+  display: block;
+  max-height: 800px;
+  min-height: 300px;
+  width: 100%;
+  cursor: pointer;
+}
+
+#profile-pic {
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  background-color: lightcyan;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -100px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#ProfileImg {
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+}
+
+#profilePicup {
+  position: relative;
+  left: 210px;
+  bottom: 70px;
+  width: 30px;
+  height: 30px;
+  border-radius: 2px;
+  background-color: rgb(27, 36, 66);
+}
+
+#coverPhotoUp {
+  margin-left: 90%;
+  margin-top: -70px;
+  width: 30px;
+  height: 30px;
+  border-radius: 2px;
+  background-color: rgb(27, 36, 66);
+}
+
+#editDetailsButton {
+  margin-left: 90%;
+  margin-top: -20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 2px;
+  background-color: rgb(27, 36, 66);
+}
+
+#saveCover {
+  position: absolute;
+  top: 350px;
+  right: 100px;
+  color: white;
+  width: 50px;
+  display: none;
+}
+
+#cancelCover {
+  position: absolute;
+  top: 350px;
+  right: 30px;
+  color: white;
+  width: 60px;
+  background-color: #ad0e2c;
+  display: none;
+}
+
+#saveProfileDetails {
+  position: absolute;
+  top: 850px;
+  right: 200px;
+  color: white;
+  width: 50px;
+  display: none;
+}
+
+#cancelProfileDetails {
+  position: absolute;
+  top: 850px;
+  right: 130px;
+  color: white;
+  width: 60px;
+  background-color: #ad0e2c;
+  display: none;
+}
+#saveProfilePic {
+  position: absolute;
+  top: 450px;
+  right: 200px;
+  color: white;
+  width: 50px;
+  display: none;
+}
+
+#cancelProfilePic {
+  position: absolute;
+  top: 450px;
+  right: 130px;
+  color: white;
+  width: 60px;
+  background-color: #ad0e2c;
+  display: none;
+}
+
+#gymInput {
+  margin-top: 80px;
+  display: none;
+}
+
+#gymOut {
+  margin-top: 50px;
+}
+
+#position {
+  margin-bottom: 100px;
+  margin-top: 50px;
+}
+
+#positions {
+  margin-left: 10px;
+  display: none;
+}
+
+#positionLabel {
+  margin-top: -30px;
+}
+
+#nameInput {
+  margin-bottom: 30px;
+}
+
+#profileName {
+  display: none;
+}
+
+#profileNameOut {
+  margin-left: -10px;
+}
+
+#gymsLabel {
+  margin-top: -70px;
+  margin-bottom: 80px;
+}
+
+#mainGym {
+  display: none;
+}
+
+#beltInput {
+  margin-bottom: 80px;
+}
+
+#whitebelt {
+  height: 25px;
+  width: 130px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-top: -40px;
+}
+
+#whitebeltNotchBot {
+  height: 25px;
+  width: 30px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-top: -15px;
+  transform: rotate(-45deg);
+  position: absolute;
+  margin-right: 10px;
+}
+#whitebeltNotchTop {
+  height: 25px;
+  width: 30px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-top: -15px;
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+#whitebeltNotchVert {
+  height: 25px;
+  width: 30px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-top: -15px;
+  transform: rotate(90deg);
+  position: absolute;
+  margin-left: 10px;
+}
+
+.beltIcons {
+  margin-top: -20px;
+  display: flex;
+  justify-content: center;
+}
+
+#whitebeltIconCon {
+  margin-top: -20px;
+}
+
+#notchCon {
+  position: absolute;
+  margin-top: -20px;
+  margin-left: -30px;
+}
+
+#whitebeltLeft {
+  height: 25px;
+  width: 80px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-top: -15px;
+  transform: rotate(-45deg);
+  position: absolute;
+  z-index: -1;
+  margin-right: 30px;
+}
+
+.beltBand {
+  height: 25px;
+  width: 30px;
+  position: absolute;
+  background-color: black;
+  margin-top: -2px;
+  margin-left: 40px;
+}
+
+#blackBand {
+  background-color: red;
+}
+
+#whitebeltRight {
+  height: 25px;
+  width: 80px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-top: -15px;
+  transform: rotate(45deg);
+  position: absolute;
+  margin-left: 30px;
+  z-index: -1;
+}
+
+.whitebelt {
+  background-color: white;
+}
+
+.bluebelt {
+  background-color: blue;
+}
+
+.purplebelt {
+  background-color: purple;
+}
+
+.brownbelt {
+  background-color: brown;
+}
+
+.blackbelt {
+  background-color: rgb(19, 18, 18);
+}
+
+#nameLoc {
+  margin-top: 50px;
+}
+#pBeltsLabel {
+  margin-right: 5px;
+  display: none;
+}
+
+#Belts {
+  background-color: lightgrey;
+  display: none;
+}
+
+#WBCon {
+  height: 90%;
+  background-color: blue;
+  border-radius: 2px;
+  width: 90%;
+}
+
+#wp-submit {
+  background-color: rgb(160, 7, 7) !important;
+  border-radius: 5px;
+  color: white;
+  height: 40px;
+  width: 80px;
+}
+
+#wpLogCon {
+  width: 60%;
+  margin-left: 65px;
+  margin-bottom: -40px;
+  margin-top: -70px;
+}
+
+#tick {
+  position: absolute;
+  margin-left: 17px;
+  margin-bottom: 20px;
+  color: rgb(7, 184, 7);
+  display: none;
+}
+
+#logout {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#logSuccess {
+  position: relative;
+  top: 30px;
+  width: 300px;
+  text-align: center;
+  display: none;
+  margin: auto;
+  transition: all 0.5s linear;
+}
+
+#activatedAlert {
+  display: none;
+  position: relative;
+  top: 50px;
+  transition: all 0.5s linear;
+}
+
+#activatedFail {
+  position: relative;
+  top: 50px;
+  width: 60%;
+  margin: 20px auto;
+  transition: all 0.5s linear;
+  display: none;
+  text-align: center;
+}
+
+#logFail {
+  position: relative;
+  top: 550px;
+  width: 60%;
+  margin: 20px auto;
+  display: none;
+  transition: all 0.5s linear;
+}
+
+#logAddGymMsg {
+  width: 50%;
+  margin-top: 570px;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+  transition: all 0.5s linear;
+}
+
+/* account settings */
+
+#accSettingsTitle {
+  margin-top: 100px;
+}
+
+#settingsForm {
+  margin-bottom: 100px;
+  width: 50%;
+}
+
+.settingsInput {
+  border-radius: 3px;
+  max-height: 30px;
+}
+
+#passwordSet {
+  display: none;
+}
+
+#passwordSet2 {
+  display: none;
+}
+
+#reEnterLabel {
+  display: none;
+}
+
+#usernameSet {
+  display: none;
+}
+
+#emailAddressSet {
+  display: none;
+}
+
+.setLabels {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.settingsButton {
+  background-image: linear-gradient(#0a0a23, #071a4b);
+  color: white;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  width: 80px;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: "Bebas Neue", cursive;
+}
+
+#deleteAccount {
+  background-image: linear-gradient(#160101, #940808);
+  color: white;
+  margin-top: 50px;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  width: 150px;
+  font-size: 25px;
+  line-height: 40px;
+  font-family: "Bebas Neue", cursive;
+}
+
+#hiddenButton {
+  display: none;
+}
+
+.settingsOutputs {
+  position: relative;
+  font-size: 18px;
+}
+
+.settingsButton:hover {
+  background-image: linear-gradient(#160101, #940808);
+}
+
+#deleteAccount:hover {
+  background-image: linear-gradient(#0a0a23, #071a4b);
+}
+
+@media only screen and (max-width: 700px) {
+  #settingsForm {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #settingsForm {
+    width: 70%;
+  }
+}
+
+#resetEmail {
+  width: 40% !important;
+}
+
+#resetEmailSendCon {
+  margin-bottom: 300px;
+}
+
+#resetEmailSend {
+  background-image: linear-gradient(#0a0a23, #071a4b);
+  color: white;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  width: 100px;
+  font-size: 30px;
+  line-height: 40px;
+  font-family: "Bebas Neue", cursive;
+}
+
+#resetEmailSend:hover {
+  background-image: linear-gradient(#160101, #940808);
+}
+
+#resetMessage {
+  margin-top: 250px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 80%;
+}
+
+#noEmailAlert {
+  text-align: center;
+  width: 40%;
+  display: none;
+  margin-bottom: 10px;
+}
+
+#yesEmailAlert {
+  text-align: center;
+  width: 40%;
+  display: none;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+  #noEmailAlert {
+    text-align: center;
+    width: 70%;
+  }
+
+  #yesEmailAlert {
+    text-align: center;
+    width: 70%;
+  }
+
+  #resetEmail {
+    width: 70% !important;
+  }
+}
+
+#resetPassMessage {
+  margin-top: 250px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 80%;
+}
+
+#samePasswords {
+  text-align: center;
+  width: 40%;
+  display: none;
+  margin-bottom: 10px;
+}
+
+#passwordChangedAlert {
+  text-align: center;
+  width: 40%;
+  display: none;
+  margin-bottom: 10px;
+}
+
+#resetPass1 {
+  width: 40% !important;
+}
+
+#resetPass2 {
+  width: 40% !important;
+}
+
+#resetPassButtonCon {
+  margin-bottom: 300px;
+}
+
+#resetPassButton {
+  background-image: linear-gradient(#0a0a23, #071a4b);
+  color: white;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  width: 100px;
+  font-size: 30px;
+  line-height: 40px;
+  font-family: "Bebas Neue", cursive;
+}
+
+#resetPassButton:hover {
+  background-image: linear-gradient(#160101, #940808);
+}
+
+#forgotPassword {
+  margin-top: -15px;
+}
+
+#signClick:hover {
+  text-decoration: underline;
+}
+
+#passResetClick:hover {
+  text-decoration: underline;
+}
+
+.accSaves {
+  height: 35px;
+  border-radius: 5px;
+  background-color: rgb(24, 18, 77);
+  border: none;
+  margin-left: 10px;
+  margin-top: 10px;
+  color: white;
+  width: 50px;
+}
+
+.accCancels {
+  height: 35px;
+  border-radius: 5px;
+  background-color: #ad0e2c;
+  border: none;
+  margin-left: 10px;
+  margin-top: 10px;
+  color: white;
+  width: 60px;
+}
+
+#usernameSave {
+  display: none;
+}
+
+#usernameCancel {
+  display: none;
+}
+
+#emailSave {
+  display: none;
+}
+
+#emailCancel {
+  display: none;
+}
+
+#passwordSave {
+  display: none;
+}
+
+#passwordCancel {
+  display: none;
+}
+
+#usernameEmpty {
+  display: none;
+}
+
+#usernameHave {
+  display: none;
+}
+
+#usernameLength {
+  display: none;
+}
+
+#emailEmpty {
+  display: none;
+}
+
+#emailInvalid {
+  display: none;
+}
+
+#emailSuccess {
+  display: none;
+}
+
+#passwordLength {
+  display: none;
+}
+
+#passwordMissing {
+  display: none;
+}
+
+#passwordMatch {
+  display: none;
+}
+
+#emailHave {
+  display: none;
+}
+
+#usernameSuccess {
+  display: none;
+}
+
+#passwordSuccess {
+  display: none;
+}
+
+#fullArrow {
+  position: absolute;
+  top: 100px;
+  right: 70px;
+  transition: all 0.5s;
+  display: none;
+}
+
+#arrowTop {
+  transition: all 0.5s;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #36ac48;
+  position: relative;
+}
+#arrowBottom {
+  transition: all 0.5s;
+  width: 12px;
+  height: 20px;
+  background-color: #36ac48;
+  position: relative;
+  left: 9px;
+}
+
+body {
+  margin-top: 120px;
+  overflow-x: hidden;
+}
+
+#alertpasswordx {
+  display: none;
+}
+
+#alertpasswordm {
+  display: none;
+}
+#alertemailx {
+  display: none;
+}
+#alertemailm {
+  display: none;
+}
+#alertuserm {
+  display: none;
+}
+#alertusere {
+  display: none;
+}
+
+#alertpasswordsame {
+  display: none;
+}
+
+#success {
+  display: none;
+}
+
+#signInAlerts {
+  margin-top: 120px;
+}
+
+#alertemailhave {
+  display: none;
+}
+
+.register {
+  background-image: linear-gradient(#c1c1c4, #aabff5);
+  border-radius: 5px;
+  margin-bottom: 100px;
+  padding: 10px;
+  width: 50% !important;
+}
+
+.recap {
+  margin-top: -80px;
+  margin-bottom: 50px;
+  line-height: 50px;
+}
+
+#recapImg {
+  width: 50px;
+  height: 50px;
+}
+
+@media only screen and (max-width: 700px) {
+  .register {
+    width: 70% !important;
+  }
+}
+
+.signLabel {
+  color: #081640;
+}
+
+#sub {
+  margin-bottom: 20px;
+  background-image: linear-gradient(#0a0a23, #071a4b);
+  color: white;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  width: 100px;
+  font-size: 20px;
+}
+
+#signcon {
+  margin-bottom: 100px;
+}
+
+.grecaptcha-badge {
+  visibility: collapse !important;
+}
+
+.wpcf7-submit {
+  margin-left: 70px;
+  width: 100px !important;
+}
+
+@media only screen and (max-width: 700px) {
+  .wpcf7-form-control {
+    width: 60%;
+  }
+}
