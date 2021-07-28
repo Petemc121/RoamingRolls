@@ -322,6 +322,8 @@ ul ul a {
   transition:all 0.2s linear;
   padding:5px;
   border-radius:3px;
+  max-width:100px;
+  text-align:center;
 }
 
 .icons:hover {
@@ -1222,8 +1224,9 @@ h1 {
   width: 35px;
   height: 35px;
   border-radius: 5px;
-  background-color: rgb(24, 18, 77);
+  background-color:#1971C2;
   border: none;
+  border-bottom:2px solid #194b7a;
   margin-left: 10px;
   margin-top: 10px;
 }
@@ -1249,7 +1252,7 @@ h1 {
 }
 
 .plusPic:hover {
-  background-color: rgb(59, 54, 107);
+  background-color: #3787d3;
 }
 
 #minusEvent1 {
@@ -1862,12 +1865,12 @@ body {
 }
 
 #facebookIcon {
-  color: #1f1f4b;
+  color: rgb(23, 23, 104);
 }
 
 #phoneIcon {
-  color: #1d752a;
   margin-right: 5px;
+  color:rgb(30, 82, 30);
 }
 
 #emailIcon {
@@ -2332,9 +2335,15 @@ body {
   resize: none;
 }
 
+.gymDesTitleCon
+{
+  display:flex;
+}
+
+
 .bottomLine {
   height: 5px;
-  background-color: #CDAF23;
+  background-color: #FFD43B;
   width: 0%;
   position: absolute;
   transition: all 0.5s;
@@ -2354,6 +2363,8 @@ body {
   border-radius: 3px;
   border: none;
 }
+
+
 
 #instructSub {
   margin-bottom: 20px;
@@ -2424,12 +2435,6 @@ body {
   display: none;
 }
 
-.readButtons {
-  border: none;
-  background-color: white;
-  font-weight: bold;
-  color: rgb(114, 113, 146);
-}
 
 #inHeadOne {
   height: 102%;
@@ -2577,6 +2582,7 @@ html {
 
 #editSchedule {
   margin-left: 80%;
+margin-bottom:10px;
 }
 
 #priceSub {
@@ -2638,6 +2644,7 @@ html {
 .classText
 {
   display:none;
+    font-family: 'Varela Round', sans-serif;
 }
 
 .classes {
@@ -2646,9 +2653,82 @@ html {
   font-weight: bold;
 }
 
+
+#classesFacilitiesCon
+{
+    background-color:#E1E1F6;
+    width:100%;
+    display:flex;
+    padding:10px;
+    margin-bottom:100px;
+}
+
+#classesCon
+{
+    width:50%;
+    text-align:center;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:left;
+}
+
+
+#facilitiesCon
+{
+    width:50%;
+    text-align:center;
+    position:relative;
+}
+
+#facilitiesTitle
+{
+    font-family: 'Varela Round', sans-serif;
+    font-size:30px;
+}
+
+#classesTitle
+{
+    font-family: 'Varela Round', sans-serif;
+    font-size:30px;
+}
+
 .classesCheck {
   display: none;
 }
+
+#scheduleProgramButtonsCOn
+{
+  display:flex;
+  flex-direction:row;
+  width:70%;
+  margin:0px auto;
+  justify-content:space-between;
+}
+
+@media (max-width: 600px)
+{
+  #scheduleProgramButtonsCOn
+{
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-between;
+ 
+}
+
+}
+
+@media (min-width: 1000px)
+{
+  #scheduleProgramButtonsCOn
+{
+ justify-content:space-around;
+ 
+}
+
+}
+
+
 
 .fa-check-circle {
   color: #1d752a;
@@ -2669,19 +2749,44 @@ html {
   text-align: center;
 }
 
-#priceLinkOut {
+
+.classLinks
+{
+  background-color:#1971C2;
+  border:none;
+  color:white;
+  border-bottom:2px solid #194b7a;
+  outline:none;
+  border-radius:3px;
   height: 35px;
   line-height: 35px;
-  font-size: 20px;
-  font-family: "Bebas Neue", cursive;
+  font-size: 16px;
+  font-weight:bold;
+  font-family: 'Varela Round', sans-serif;
+  margin:5px 0px;
+  
 }
 
-#scheduleLinkOut {
-  height: 35px;
-  line-height: 35px;
-  font-size: 20px;
-  font-family: "Bebas Neue", cursive;
+.classLinks:hover
+{
+  background-color:#4493dd;
 }
+
+.readButtons {
+  border: none;
+  color:white;
+  border-bottom:2px solid #194b7a;
+  font-weight: bold;
+  background-color:#1971C2;
+  border-radius:2px;
+}
+
+.readButtons:hover {
+  background-color:#4493dd;
+
+}
+
+
 
 #scheduleLinkIn {
   display: none;
@@ -3038,7 +3143,7 @@ html {
 	} */
 
 #facilityIcons {
-  margin-top: -50px;
+  margin-top: -100px;
 }
 
 #facilitiesPlusClasses {
