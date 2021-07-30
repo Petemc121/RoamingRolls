@@ -1840,6 +1840,8 @@ body {
   margin: 0;
 }
 
+
+
 /* Slideshow container */
 
 #slideFormInput {
@@ -1996,13 +1998,35 @@ body {
   overflow-y: hidden;
   max-height: 500px;
   min-height: 300px;
-  width: 80%;
+  width: 100%;
   margin-top: 80px;
   margin-bottom: 80px;
   margin-left: auto;
   margin-right: auto;
   z-index: -1;
+
 }
+
+
+#displayImg {
+  display: block;
+  max-height: 800px;
+  min-height: 300px;
+  width: 100%;
+  cursor: pointer;
+  z-index: -1;
+
+}
+
+
+.gymHeader {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+
+}
+
 
 #logo-pic {
   height: 200px;
@@ -2237,12 +2261,6 @@ body {
   margin-bottom: 20px;
   margin-right: 5px;
 }
-.flex-container {
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
-  margin: 0 auto;
-}
 
 .flex-item1 {
   width: 300px;
@@ -2257,15 +2275,6 @@ body {
   flex-grow: 0.5;
 }
 
-#displayImg {
-  display: block;
-  max-height: 800px;
-  min-height: 300px;
-  width: 100%;
-  cursor: pointer;
-  z-index: -1;
-}
-
 #pageSectionMenu {
   height: 50px;
   margin-bottom: 20px;
@@ -2278,7 +2287,7 @@ body {
 .menuContainer {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: left;
   width: 100%;
 }
 
@@ -2421,10 +2430,8 @@ body {
 
 #gymDesout {
   max-height: 100px;
-  max-width: 900px;
-  text-align: center;
-  word-wrap: break-word;
-  overflow-y: hidden;
+ width:100%;
+  text-align: left;
 }
 
 #readLess2 {
@@ -2574,6 +2581,7 @@ html {
 
 #editChecks {
   margin-left: 80%;
+  margin-bottom:-50px;
 }
 
 .checksIn {
@@ -2656,27 +2664,38 @@ margin-bottom:10px;
 
 #classesFacilitiesCon
 {
-    background-color:#E1E1F6;
+    background-color:#f1f4f8;
     width:100%;
     display:flex;
+    justify-content:center;
     padding:10px;
-    margin-bottom:100px;
+    
+}
+
+@media (max-width:600px)
+{
+  #classesFacilitiesCon
+{
+   flex-direction:column;
+    
+}
+
+
 }
 
 #classesCon
 {
-    width:50%;
     text-align:center;
     position:relative;
     display:flex;
     flex-direction:column;
     align-items:left;
+    margin-left:20px;
 }
 
 
 #facilitiesCon
 {
-    width:50%;
     text-align:center;
     position:relative;
 }
@@ -2701,29 +2720,29 @@ margin-bottom:10px;
 {
   display:flex;
   flex-direction:row;
-  width:70%;
+  width:60%;
   margin:0px auto;
   justify-content:space-between;
 }
 
-@media (max-width: 600px)
+@media (max-width: 1300px)
 {
   #scheduleProgramButtonsCOn
 {
   flex-direction:column;
   align-items:center;
   justify-content:space-between;
- 
+  
 }
 
 }
 
-@media (min-width: 1000px)
+@media (min-width: 1300px)
 {
   #scheduleProgramButtonsCOn
 {
- justify-content:space-around;
- 
+ justify-content:space-evenly;
+width:40%;
 }
 
 }
@@ -2777,6 +2796,7 @@ margin-bottom:10px;
   color:white;
   border-bottom:2px solid #194b7a;
   font-weight: bold;
+  margin-bottom:20px;
   background-color:#1971C2;
   border-radius:2px;
 }
@@ -2832,6 +2852,16 @@ margin-bottom:10px;
 
 .facCard2 {
   width: 320px;
+}
+
+#instructorCards {
+  background-color: #FDFFF7;
+}
+
+#instructCon
+{
+  background-color: #FDFFF7;
+  margin-bottom:-20px;
 }
 
 .instruct-card {
@@ -3143,13 +3173,14 @@ margin-bottom:10px;
 	} */
 
 #facilityIcons {
-  margin-top: -100px;
+  margin-top: -50px;
 }
 
 #facilitiesPlusClasses {
   display: flex;
   flex-direction: row;
 }
+
 
 .checkbox-grid {
   width: 100%;
@@ -3162,6 +3193,7 @@ margin-bottom:10px;
   width: 30%;
   display: flex;
   justify-content: center;
+  
 }
 
 .checkbox-grid label {
