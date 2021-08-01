@@ -29,6 +29,7 @@ const scheduleOut = document.getElementById("scheduleLinkOut");
 const scheduleCan = document.getElementById("scheduleCan");
 const editChecks = document.getElementById("editChecks");
 const facilityCheck = document.getElementsByClassName("facilityCheck");
+const facilityIcons = document.getElementById("facilityIcons")
 const checksIn = document.getElementsByClassName("checksIn");
 const checkCan = document.getElementById("checksCan");
 const classesCheck = document.getElementsByClassName("classesCheck");
@@ -90,6 +91,16 @@ cancel1.addEventListener("click", function () {
 
 
 window.onload = function () {
+
+  if (isOverflown(gymDes))
+{
+  gymDes.style.display = "block"
+} else
+{
+  gymDes.style.display = "none"
+
+}
+
 
   const imgUp = document.getElementById("uploadImages");
   const imgRules = document.getElementById("imgRules");
@@ -239,8 +250,10 @@ function fasterPreview2(uploader, image, cancelID, saveID, upID) {
 
 for (let i = 0; i < pageseclinks.length; i++) {
   pageseclinks[i].addEventListener("mouseover", function () {
-    bottomLine[i].style.width = "24.9%";
-    pagesectab[i].style.color = "#cdaf23"
+
+    bottomLine[i].style.width = "17.45%";
+    pagesectab[i].style.color = "#AD0E2C";
+    
   });
 }
 
@@ -248,8 +261,10 @@ for (let i = 0; i < pageseclinks.length; i++) {
   pageseclinks[i].addEventListener("mouseout", function () {
     bottomLine[i].style.width = "0px";
     pagesectab[i].style.color = "white"
-    
+  
   });
+
+ 
 }
 
 function showslide() {
@@ -281,8 +296,14 @@ function showMore() {
 function showLess() {
   readMore.style.display = "inline-block";
   readLess.style.display = "none";
-  gymDes.style.maxHeight = "100px";
+  gymDes.style.maxHeight = "105px";
 }
+
+function isOverflown(element) {
+  return element.scrollHeight > element.clientHeight || element.scrollWidth > element.clientWidth;
+}
+
+
 
 var other = document.getElementById("other");
 var otherCheck = document.getElementById("otherCheck");
@@ -618,6 +639,8 @@ editChecks.addEventListener("click", function () {
   for (let i = 0; i < checksIn.length; i++) {
     checksIn[i].style.display = "block";
   }
+  facilityIcons.style.display = "none"
+
 });
 
 scheduleCan.addEventListener("click", function () {
