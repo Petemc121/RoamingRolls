@@ -89,15 +89,31 @@ cancel1.addEventListener("click", function () {
   desOut.style.margin = "0 auto";
 });
 
+function isOverflown(element) {
+  return element.scrollHeight > element.clientHeight || element.scrollWidth > element.clientWidth;
+}
+
+function showMore() {
+  readMore.style.display = "none";
+  readLess.style.display = "inline-block";
+  gymDes.style.maxHeight = "400px";
+}
+
+function showLess() {
+  readMore.style.display = "inline-block";
+  readLess.style.display = "none";
+  gymDes.style.maxHeight = "105px";
+}
+
 
 window.onload = function () {
 
   if (isOverflown(gymDes))
 {
-  gymDes.style.display = "block"
+  readMore.style.display = "block"
 } else
 {
-  gymDes.style.display = "none"
+  readMore.style.display = "none"
 
 }
 
@@ -287,21 +303,8 @@ function hideMap() {
   displayImg.style.display = "block";
 }
 
-function showMore() {
-  readMore.style.display = "none";
-  readLess.style.display = "inline-block";
-  gymDes.style.maxHeight = "400px";
-}
 
-function showLess() {
-  readMore.style.display = "inline-block";
-  readLess.style.display = "none";
-  gymDes.style.maxHeight = "105px";
-}
 
-function isOverflown(element) {
-  return element.scrollHeight > element.clientHeight || element.scrollWidth > element.clientWidth;
-}
 
 
 
@@ -827,13 +830,13 @@ gymDelete.addEventListener("click", function () {
   }
 });
 
-for (let i = 0; i < icons.length; i++)
-{
-  icons[i].addEventListener("mouseover", () => {
-    iconNotes[i].style.opacity = "1"
-  })
+// for (let i = 0; i < icons.length; i++)
+// {
+//   icons[i].addEventListener("mouseover", () => {
+//     iconNotes[i].style.opacity = "1"
+//   })
 
-  icons[i].addEventListener("mouseout", () => {
-    iconNotes[i].style.opacity = "0"
-  })
-}
+//   icons[i].addEventListener("mouseout", () => {
+//     iconNotes[i].style.opacity = "0"
+//   })
+// }
