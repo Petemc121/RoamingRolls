@@ -295,10 +295,8 @@ ul ul a {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly !important;
-  margin-bottom: 50px;
-  margin-top: 50px;
   flex-wrap: wrap;
-  width: 50%;
+  width: 80%;
 }
 
 .icons {
@@ -318,7 +316,6 @@ ul ul a {
   background-color:#071a4b;
   color:white;
   font-weight:bold;
-  opacity:0;
   transition:all 0.2s linear;
   padding:5px;
   border-radius:3px;
@@ -1134,6 +1131,10 @@ h1 {
   overflow-y: auto;
 }
 
+#extraTitles {
+  margin-left:5px;
+}
+
 .adults {
   background-color: #1b2442;
   width: 107%;
@@ -1224,9 +1225,9 @@ h1 {
   width: 35px;
   height: 35px;
   border-radius: 5px;
-  background-color:#1971C2;
+  background-color:#AD0E2C;
   border: none;
-  border-bottom:2px solid #194b7a;
+  border-bottom:2px solid #70091c;
   margin-left: 10px;
   margin-top: 10px;
 }
@@ -1243,16 +1244,16 @@ h1 {
 }
 
 #picPlusCon {
-  width: 100%;
+
   position: absolute;
-  bottom: 330px;
-  right: 45px;
+  top:500px;
+  right: 20%;
   display: flex;
   justify-content: flex-end;
 }
 
 .plusPic:hover {
-  background-color: #3787d3;
+  background-color: #ce2040;
 }
 
 #minusEvent1 {
@@ -1632,7 +1633,7 @@ h3 {
   justify-content:flex-start!important;
   align-items: center;
   /* background-image: linear-gradient(to bottom right, #c7daec, #f3f4f5); */
-  background-color: #12283d;
+  background-color: #071A4B;
   color: white;
   border-radius: 3px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -1645,12 +1646,12 @@ h3 {
 }
 
 #gymCardTitle {
-  color: rgb(218, 214, 25);
+  color:#AD0E2C;
 }
 
 #readMore
 {
-  color: rgb(218, 214, 25);
+  color:#AD0E2C;
 
 }
 
@@ -1666,7 +1667,8 @@ h3 {
 
 #GCCTitle
 {
-  color: rgb(218, 214, 25);
+  color:#AD0E2C;
+
 
 }
 
@@ -1901,6 +1903,8 @@ body {
   margin-top: 35px;
 }
 
+
+
 #phoneTip {
   right: 50px;
   max-width: 170px;
@@ -2087,6 +2091,7 @@ body {
 #gymTitle {
   margin-bottom: 5px;
   margin-left: 5px;
+  color:#AD0E2C;
 }
 
 #imgRules {
@@ -2336,6 +2341,13 @@ body {
   transition: all 0.5s;
 }
 
+#gymDes
+{
+  margin-left:5px;
+  font-family: 'Varela Round', sans-serif;
+
+}
+
 #gymDesIn {
   width: 500px;
   display: none;
@@ -2352,7 +2364,7 @@ body {
 
 .bottomLine {
   height: 5px;
-  background-color: #FFD43B;
+  background-color: #AD0E2C;
   width: 0%;
   position: absolute;
   transition: all 0.5s;
@@ -2429,9 +2441,19 @@ body {
 }
 
 #gymDesout {
-  max-height: 100px;
- width:100%;
+  max-height: 105px;
+ width:80%;
   text-align: left;
+  font-family: 'Varela Round', sans-serif;
+  overflow:hidden;
+  margin-left:10px;
+}
+
+#gymDesOutParagraph
+{
+  font-family: 'Varela Round', sans-serif;
+  font-size:18px;
+
 }
 
 #readLess2 {
@@ -2624,11 +2646,7 @@ margin-bottom:10px;
   margin-left: 10px;
 }
 
-#otherOut {
-  margin-bottom: 30px;
-  width: 80%;
-  text-align: center;
-}
+
 
 #scheduleCan {
   margin-right: 10px;
@@ -2643,10 +2661,10 @@ margin-bottom:10px;
   display: none !important;
 }
 
-#classesContain {
-  width: 300px;
+#classDisplayCon {
   display: flex;
   flex-direction: column;
+  width:70%;
 }
 
 .classText
@@ -2658,52 +2676,62 @@ margin-bottom:10px;
 .classes {
   display: flex;
   justify-content: space-between;
-  font-weight: bold;
+  font-size:20px;
 }
 
 
 #classesFacilitiesCon
 {
-    background-color:#f1f4f8;
+    
     width:100%;
     display:flex;
-    justify-content:center;
-    padding:10px;
-    
-}
-
-@media (max-width:600px)
-{
-  #classesFacilitiesCon
-{
-   flex-direction:column;
+    justify-content:space-evenly;
+    flex-wrap:wrap;
+    margin-bottom:10px;
     
 }
 
 
+
+#facilitiesTitle
+{
+  margin-top:10px;
+   
 }
+
+
 
 #classesCon
 {
-    text-align:center;
     position:relative;
     display:flex;
     flex-direction:column;
-    align-items:left;
-    margin-left:20px;
+    align-items:space-evenly;
+   width:50%;
+   background-color: #f5f8fc;
+   border-top:2px solid #557ba3;
+   border-bottom:2px solid #557ba3;
+
 }
+
 
 
 #facilitiesCon
 {
     text-align:center;
     position:relative;
+    background-color: #f5f8fc;
+   border-top:2px solid #557ba3;
+   border-bottom:2px solid #557ba3;
+   border-left:2px solid #557ba3;
+    width:50%;
 }
 
 #facilitiesTitle
 {
     font-family: 'Varela Round', sans-serif;
     font-size:30px;
+   
 }
 
 #classesTitle
@@ -2716,18 +2744,25 @@ margin-bottom:10px;
   display: none;
 }
 
-#scheduleProgramButtonsCOn
+#scheduleProgramButtonsCon
 {
   display:flex;
   flex-direction:row;
-  width:60%;
-  margin:0px auto;
+  width:100%;
+  margin:10px auto;
   justify-content:space-between;
+}
+
+#otherOut {
+  margin:40px 0px;
+  margin-left:10px;
+  font-size:18px;
+  width:80%;
 }
 
 @media (max-width: 1300px)
 {
-  #scheduleProgramButtonsCOn
+  #scheduleProgramButtonsCon
 {
   flex-direction:column;
   align-items:center;
@@ -2735,15 +2770,58 @@ margin-bottom:10px;
   
 }
 
+
+#classesFacilitiesCon
+{
+    
+    flex-direction:column;
+    
+}
+#content {
+  width: 100%;
+}
+
+#classesCon{
+
+width:100%;
+border-bottom:none;
+}
+
+#facilitiesCon{
+
+  width:100%;
+  border-left:none;
+  }
+
+  #otherOut {
+    width:95%;
+    margin-left:10px;
+  }
+
+  #gymDesOut
+  {
+    width:90%;
+    margin-left:10px;
+  }
+
 }
 
 @media (min-width: 1300px)
 {
-  #scheduleProgramButtonsCOn
+  #scheduleProgramButtonsCon
 {
  justify-content:space-evenly;
-width:40%;
+width:80%;
 }
+
+
+
+#content {
+  width: 70%;
+  margin: 0px auto;
+}
+
+
 
 }
 
@@ -2771,10 +2849,10 @@ width:40%;
 
 .classLinks
 {
-  background-color:#1971C2;
+  background-color:#AD0E2C;
   border:none;
   color:white;
-  border-bottom:2px solid #194b7a;
+  border-bottom:2px solid #7a0c21;
   outline:none;
   border-radius:3px;
   height: 35px;
@@ -2788,21 +2866,23 @@ width:40%;
 
 .classLinks:hover
 {
-  background-color:#4493dd;
+  background-color:#d13753;
 }
 
 .readButtons {
   border: none;
   color:white;
-  border-bottom:2px solid #194b7a;
+  border-bottom:2px solid #7a0c21;
   font-weight: bold;
   margin-bottom:20px;
-  background-color:#1971C2;
+  background-color:#AD0E2C;
   border-radius:2px;
+  margin-top:10px;
+  margin-left:5px;
 }
 
 .readButtons:hover {
-  background-color:#4493dd;
+  background-color:#ce2040;
 
 }
 
@@ -2855,13 +2935,21 @@ width:40%;
 }
 
 #instructorCards {
-  background-color: #FDFFF7;
+  background-color: #fffafa;
+}
+
+#instructorTitle
+{
+  margin-top:10px;
+  margin-left:5px;
 }
 
 #instructCon
 {
-  background-color: #FDFFF7;
+  background-color: #fffafa;
+  border-top:1px solid #c7c5c5;
   margin-bottom:-20px;
+  padding-top:10px;
 }
 
 .instruct-card {
@@ -3061,7 +3149,7 @@ width:40%;
 }
 
 .titOut {
-  border-radius: 3px;
+  border-radius: 1px;
   border: none;
   background-color: #e5e9f5;
   color: rgb(10, 1, 1);
@@ -3101,7 +3189,7 @@ width:40%;
 
 .beltLevelOut {
   float: left;
-  border-radius: 2px;
+  border-radius: 1px;
   background-color: #e5e9f5;
   position: relative;
   font-weight: bold;
@@ -3155,22 +3243,6 @@ width:40%;
   margin-left: 20px;
 }
 
-/* .bodyContain {
-		background-color:#fdfdef;
-		width:100%;
-		margin-bottom:50px;
-	}
-
-	.bodyPerim {
-		background-color:#fdfdef;
-		display:flex;
-		justify-content:center;
-		
-	}
-	
-	.headContain {
-		background-color:#fdfdef;
-	} */
 
 #facilityIcons {
   margin-top: -50px;
