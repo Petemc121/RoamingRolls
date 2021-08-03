@@ -55,7 +55,7 @@ const prices = document.getElementById("prices");
 const fullPrice = document.getElementById("fullPrice");
 const pagesecmenu = document.getElementById("pageSecContain");
 const pageseclinks = document.getElementsByClassName("pageSecLinks");
-const pagesectab= document.getElementsByClassName("pageSecTab");
+const pagesectab = document.getElementsByClassName("pageSecTab");
 const bottomLine = document.getElementsByClassName("bottomLine");
 const visitT = document.getElementById("visitt");
 const plink = document.getElementById("plink");
@@ -108,6 +108,14 @@ function showLess() {
 
 window.onload = function () {
 
+<<<<<<< HEAD
+  if (isOverflown(gymDes)) {
+    readMore.style.display = "block"
+  } else {
+    readMore.style.display = "none"
+
+  }
+=======
   if (isOverflown(gymDes))
 {
   readMore.style.display = "block"
@@ -116,6 +124,7 @@ window.onload = function () {
   readMore.style.display = "none"
 
 }
+>>>>>>> 6b98043d92643431839dc6b4193c0d950b030305
 
 
   const imgUp = document.getElementById("uploadImages");
@@ -269,7 +278,11 @@ for (let i = 0; i < pageseclinks.length; i++) {
 
     bottomLine[i].style.width = "17.45%";
     pagesectab[i].style.color = "#AD0E2C";
+<<<<<<< HEAD
+
+=======
     
+>>>>>>> 6b98043d92643431839dc6b4193c0d950b030305
   });
 }
 
@@ -277,10 +290,17 @@ for (let i = 0; i < pageseclinks.length; i++) {
   pageseclinks[i].addEventListener("mouseout", function () {
     bottomLine[i].style.width = "0px";
     pagesectab[i].style.color = "white"
+<<<<<<< HEAD
+
+  });
+
+
+=======
   
   });
 
  
+>>>>>>> 6b98043d92643431839dc6b4193c0d950b030305
 }
 
 function showslide() {
@@ -830,6 +850,8 @@ gymDelete.addEventListener("click", function () {
   }
 });
 
+<<<<<<< HEAD
+=======
 // for (let i = 0; i < icons.length; i++)
 // {
 //   icons[i].addEventListener("mouseover", () => {
@@ -840,3 +862,4 @@ gymDelete.addEventListener("click", function () {
 //     iconNotes[i].style.opacity = "0"
 //   })
 // }
+>>>>>>> 6b98043d92643431839dc6b4193c0d950b030305
