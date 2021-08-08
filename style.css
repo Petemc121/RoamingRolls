@@ -1632,8 +1632,7 @@ h3 {
   display: flex;
   justify-content:flex-start!important;
   align-items: center;
-  /* background-image: linear-gradient(to bottom right, #c7daec, #f3f4f5); */
-  background-color: #071A4B;
+  background-color: #193069;
   color: white;
   border-radius: 3px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -1655,6 +1654,7 @@ h3 {
 
 }
 
+
 .gymCardFW
 {
   margin-top:20px;
@@ -1664,6 +1664,7 @@ h3 {
 .markers {
   cursor:pointer;
 }
+
 
 #GCCTitle
 {
@@ -1835,6 +1836,27 @@ h3 {
   color: #081947;
 }
 
+.pagination {
+  flex-direction:column !important;
+  align-items:center !important;
+  color:#AD113F;
+  font-size:25px;
+}
+
+.screen-reader-text {
+  color:#0A0A23;
+  font-family: 'Bebas Neue', cursive;
+  margin-right:10px;
+  font-size:40px;
+}
+
+.current {
+  color:#071A4B;
+}
+
+.next {
+  margin-right:5px;
+}
 /* Gym page */
 
 body {
@@ -2020,7 +2042,6 @@ body {
   cursor: pointer;
   z-index: -1;
 
-<<<<<<< HEAD
 }
 
 
@@ -2033,20 +2054,6 @@ body {
 }
 
 
-=======
-}
-
-
-.gymHeader {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin: 0 auto;
-
-}
-
-
->>>>>>> 6b98043d92643431839dc6b4193c0d950b030305
 #logo-pic {
   height: 200px;
   width: 200px;
@@ -2677,15 +2684,12 @@ margin-bottom:10px;
 }
 
 #classDisplayCon {
-<<<<<<< HEAD
   display: flex;
   flex-direction: column;
   width:70%;
 }
 
 #facilitiesDisplayCon {
-=======
->>>>>>> 6b98043d92643431839dc6b4193c0d950b030305
   display: flex;
   flex-direction: column;
   width:70%;
@@ -2727,17 +2731,10 @@ margin-bottom:10px;
 
 #classesCon
 {
-<<<<<<< HEAD
   position:relative;
   display:flex;
   flex-direction:column;
   justify-content:space-between;
-=======
-    position:relative;
-    display:flex;
-    flex-direction:column;
-    align-items:space-evenly;
->>>>>>> 6b98043d92643431839dc6b4193c0d950b030305
    width:50%;
    background-color: #f5f8fc;
    border-top:2px solid #557ba3;
@@ -2751,12 +2748,9 @@ margin-bottom:10px;
 {
     text-align:center;
     position:relative;
-<<<<<<< HEAD
     display:flex;
     flex-direction:column;
     justify-content:space-between;
-=======
->>>>>>> 6b98043d92643431839dc6b4193c0d950b030305
     background-color: #f5f8fc;
    border-top:2px solid #557ba3;
    border-bottom:2px solid #557ba3;
@@ -2764,7 +2758,6 @@ margin-bottom:10px;
     width:50%;
 }
 
-<<<<<<< HEAD
 #facilitySubCon
 {
   display:none;
@@ -2776,8 +2769,6 @@ margin-bottom:10px;
 }
 
 
-=======
->>>>>>> 6b98043d92643431839dc6b4193c0d950b030305
 #facilitiesTitle
 {
     font-family: 'Varela Round', sans-serif;
@@ -2785,7 +2776,6 @@ margin-bottom:10px;
    
 }
 
-<<<<<<< HEAD
 #facilitiesForm
 {
   height:90%;
@@ -2807,8 +2797,6 @@ margin-bottom:10px;
 
 
 
-=======
->>>>>>> 6b98043d92643431839dc6b4193c0d950b030305
 #classesTitle
 {
     font-family: 'Varela Round', sans-serif;
@@ -2819,18 +2807,7 @@ margin-bottom:10px;
   display: none;
 }
 
-<<<<<<< HEAD
 
-=======
-#scheduleProgramButtonsCon
-{
-  display:flex;
-  flex-direction:row;
-  width:100%;
-  margin:10px auto;
-  justify-content:space-between;
-}
->>>>>>> 6b98043d92643431839dc6b4193c0d950b030305
 
 #otherOut {
   margin:40px 0px;
@@ -2849,7 +2826,6 @@ margin-bottom:10px;
   
 }
 
-<<<<<<< HEAD
 #facilitiesDisplayCon {
 
   width:50%;
@@ -2859,8 +2835,6 @@ margin-bottom:10px;
   width:50%;
 }
 
-=======
->>>>>>> 6b98043d92643431839dc6b4193c0d950b030305
 
 #classesFacilitiesCon
 {
