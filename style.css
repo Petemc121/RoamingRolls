@@ -372,14 +372,50 @@ a[data-toggle="collapse"] {
 } */
 
 .jumbo1 {
-  background-image: url(https://roamingrolls.com/wp-content/uploads/2020/08/searchbackground2.png);
+  background-image: url(https://www.roamingrolls.com/wp-content/uploads/2021/08/4444048.jpg);
   background-size: cover;
-  height: 100%;
-  margin-top:80px;
+  background-repeat:no-repeat;
+  background-position:center;
+  margin-top:120px;
+  height:800px;
+
 }
 
+#jumbo1Title
+{
+  margin-top:120px;
+  margin-bottom:10px;
+  text-align:center;
+  font-size:70px;
+}
+
+.searchContainer {
+  margin-top:100px;
+}
+
+
+
+@media(max-width:1000px)
+{
+  .jumbo1 {
+
+    height:400px;
+    margin-top:110px;
+  }
+
+  #jumbo1Title
+{
+  margin-top:100px;
+  margin-bottom:-10px;
+  font-size:50px;
+}
+}
+
+
+
+
+
 .jumbo2 {
-  margin-top: 420px;
   background-color: white !important;
   height:450px;
 }
@@ -396,9 +432,10 @@ align-items:center;
   margin-bottom:40px;
 }
 
-.jumbo3 {
-  background-image: url(https://roamingrolls.com/wp-content/uploads/2020/08/Untitled-design-21.png);
+#jumbo3 {
+  /* background-image: url(https://roamingrolls.com/wp-content/uploads/2020/08/Untitled-design-21.png); */
   background-size: cover;
+  background-color:#eef0fc;
 }
 
 #budge {
@@ -1669,8 +1706,6 @@ h3 {
 #GCCTitle
 {
   color:#AD0E2C;
-
-
 }
 
 
@@ -1690,6 +1725,11 @@ h3 {
   left:20px;
   height:100%;
   padding:10px;
+}
+
+.fa-map-marker-alt
+{
+  margin-left:5px;
 }
 
 @media only screen and (max-width: 700px) {
@@ -1718,6 +1758,8 @@ h3 {
   text-align:center;
   margin-right:40px;
 }
+
+
 }
 
 @media only screen and (max-width: 400px) {
@@ -1746,6 +1788,7 @@ h3 {
   text-align:center;
   width:100%;
 }
+
 }
 
 .gymInfo {
@@ -1767,6 +1810,7 @@ h3 {
   width: 600px !important;
   height: 40px;
   margin-top: 20px;
+  background-color:white;
 }
 
 #searchRules {
@@ -2323,7 +2367,13 @@ body {
   justify-content: center !important;
   margin-bottom: 10px;
   width: 100%;
-  height: auto;
+}
+
+.verticalCenter {
+  display: flex !important;
+  flex-direction:column !important;
+  justify-content:space-between;
+  width: 100%;
 }
 
 #pageTab1 {
@@ -2405,9 +2455,16 @@ body {
   color: white;
   border-radius: 3px;
   border: none;
+  display:none;
 }
 
-
+#extraSubsCon
+{
+  display:flex;
+  width:200px;
+  justify-content:space-evenly;
+  margin:50px auto;
+}
 
 #instructSub {
   margin-bottom: 20px;
@@ -2429,6 +2486,7 @@ body {
   color: white;
   border-radius: 2px;
   border: none;
+  display:none;
 }
 
 .gymSubs:hover {
@@ -2643,11 +2701,13 @@ margin-bottom:10px;
 }
 
 #scheduleSub {
-  margin-right: 10px;
+  width:100px;
+  margin:0px 5px;
   display: none;
 }
 #scheduleCan {
-  margin-right: 10px;
+  width:100px;
+  margin:0px 5px;
   display: none;
 }
 
@@ -2668,12 +2728,6 @@ margin-bottom:10px;
   margin-left: 10px;
 }
 
-
-
-#scheduleCan {
-  margin-right: 10px;
-  display: none;
-}
 
 .scheduleIn {
   display: none;
@@ -2809,7 +2863,7 @@ margin-bottom:10px;
 
 
 
-#otherOut {
+#extraOutput {
   margin:40px 0px;
   margin-left:10px;
   font-size:18px;
@@ -2858,7 +2912,7 @@ border-bottom:none;
   border-left:none;
   }
 
-  #otherOut {
+  #extraOutput {
     width:95%;
     margin-left:10px;
   }
@@ -3340,7 +3394,7 @@ width:80%;
   font-weight: bold;
 }
 
-#other {
+#extraInput {
   width: 50%;
   height: 100px;
   margin-top: 30px;
