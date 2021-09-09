@@ -80,6 +80,7 @@ const extraOutput = document.getElementById('extraOutput');
 const extraCancel = document.getElementById('extraCan');
 const extraSubmit = document.getElementById('extraSub');
 const backToSearch = document.getElementById('backToSearch');
+const backToSearchLink = document.getElementById('backToSearchLink');
 
 if (window.history.replaceState) {
   window.history.replaceState(null, null, window.location.href);
@@ -87,13 +88,25 @@ if (window.history.replaceState) {
 
 backToSearch.addEventListener("mouseover", () => {
   backToSearch.style.width = "150px"
-  setTimeout(() => {backToSearch.textContent = "Back to Search"}, 400)
+  if (backToSearch.style.width === "150px"){
+    backToSearchLink.innerHTML = 'Back to Search'
+     } else {
+      backToSearchLink.innerHTML = "<<"
+     }
+ 
 })
 
 backToSearch.addEventListener("mouseout", () => {
+  
   backToSearch.style.width = "50px"
- backToSearch.textContent = "<<"
+    if (backToSearch.style.width === "150px"){
+      backToSearchLink.innerHTML = 'Back to Search'
+     } else {
+      backToSearchLink.innerHTML = "<<"
+     }
 })
+
+
 
 
 editDes.addEventListener("click", function () {
