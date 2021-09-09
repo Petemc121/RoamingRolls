@@ -35,7 +35,8 @@ const scheduleOut = document.getElementById("scheduleLinkOut");
 const scheduleCan = document.getElementById("scheduleCan");
 const editChecks = document.getElementById("editChecks");
 const facilityCheck = document.getElementsByClassName("facilityCheck");
-const facilityIcons = document.getElementById("facilityIcons")
+const facilityTick = document.getElementsByClassName("facilityTick");
+const facilitiesText = document.getElementsByClassName("facilitiesText");
 const checksIn = document.getElementsByClassName("checksIn");
 const checkCan = document.getElementById("checksCan");
 const classesCheck = document.getElementsByClassName("classesCheck");
@@ -78,12 +79,21 @@ const extraInput = document.getElementById('extraInput');
 const extraOutput = document.getElementById('extraOutput');
 const extraCancel = document.getElementById('extraCan');
 const extraSubmit = document.getElementById('extraSub');
-
+const backToSearch = document.getElementById('backToSearch');
 
 if (window.history.replaceState) {
   window.history.replaceState(null, null, window.location.href);
 }
 
+backToSearch.addEventListener("mouseover", () => {
+  backToSearch.style.width = "150px"
+  setTimeout(() => {backToSearch.textContent = "Back to Search"}, 400)
+})
+
+backToSearch.addEventListener("mouseout", () => {
+  backToSearch.style.width = "50px"
+ backToSearch.textContent = "<<"
+})
 
 
 editDes.addEventListener("click", function () {
@@ -625,9 +635,7 @@ editSchedule.addEventListener("click", function () {
     priceDesIn[i].style.display = "block";
   }
 
-  priceLink.style.display = "block";
-  priceLinkOut.style.display = "none";
-  priceLinkHint.style.display = "block";
+ 
 });
 
 editChecks.addEventListener("click", function () {
@@ -635,10 +643,23 @@ editChecks.addEventListener("click", function () {
     facilityCheck[i].style.display = "block";
   }
 
+  for (let i = 0; i < facilitiesText.length; i++) {
+  
+    facilitiesText[i].style.display = "block";
+  }
+
+  for (let i = 0; i < facilityTick.length; i++) {
+    facilityTick[i].style.display = "none"
+  }
+
+
   for (let i = 0; i < checksIn.length; i++) {
     checksIn[i].style.display = "block";
   }
-  facilityIcons.style.display = "none"
+
+  priceLink.style.display = "block";
+  priceLinkOut.style.display = "none";
+  priceLinkHint.style.display = "block";
 
 });
 
