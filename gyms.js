@@ -80,7 +80,6 @@ const extraOutput = document.getElementById('extraOutput');
 const extraCancel = document.getElementById('extraCan');
 const extraSubmit = document.getElementById('extraSub');
 const backToSearch = document.getElementById('backToSearch');
-const backToSearchLink = document.getElementById('backToSearchLink');
 
 if (window.history.replaceState) {
   window.history.replaceState(null, null, window.location.href);
@@ -89,9 +88,9 @@ if (window.history.replaceState) {
 backToSearch.addEventListener("mouseover", () => {
   backToSearch.style.width = "150px"
   if (backToSearch.style.width === "150px"){
-    backToSearchLink.innerHTML = 'Back to Search'
+    backToSearch.textContent = 'Back to Search'
      } else {
-      backToSearchLink.innerHTML = "<<"
+      backToSearch.textContent = "<<"
      }
  
 })
@@ -100,12 +99,15 @@ backToSearch.addEventListener("mouseout", () => {
   
   backToSearch.style.width = "50px"
     if (backToSearch.style.width === "150px"){
-      backToSearchLink.innerHTML = 'Back to Search'
+      backToSearch.textContent = 'Back to Search'
      } else {
-      backToSearchLink.innerHTML = "<<"
+      backToSearch.textContent = "<<"
      }
 })
 
+backToSearch.addEventListener("click", () => {
+  goBack()
+})
 
 
 
@@ -123,6 +125,10 @@ cancel1.addEventListener("click", function () {
   desOut.style.display = "block";
   desOut.style.margin = "0 auto";
 });
+
+function goBack() {
+  window.history.back();
+}
 
 function isOverflown(element) {
   return element.scrollHeight > element.clientHeight || element.scrollWidth > element.clientWidth;
