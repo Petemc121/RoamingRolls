@@ -415,9 +415,6 @@ a[data-toggle="collapse"] {
 }
 
 
-
-
-
 .jumbo2 {
   background-color: white !important;
   height:450px;
@@ -436,7 +433,7 @@ align-items:center;
 }
 
 #jumbo3 {
-  /* background-image: url(https://roamingrolls.com/wp-content/uploads/2020/08/Untitled-design-21.png); */
+
   background-size: cover;
   background-color:#f7f5ff;
 }
@@ -579,14 +576,6 @@ h1 {
   min-height: 150px;
   min-width: 150px;
 }
-/* 
-.article-blockers {	
-	background: rgba(0,0,0,.5);
-	height:60%;
-	width:100%;
-	position:absolute;
-	bottom:50%;
-} */
 
 .footer {
   background-color: rgb(28, 29, 37);
