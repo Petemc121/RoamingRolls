@@ -190,6 +190,7 @@ a:hover {
 #right-nav {
   display:flex;
   justify-content:space-between;
+  align-items:center;
   width:100px;
 }
 
@@ -1709,6 +1710,8 @@ h3 {
 {
   margin-top:20px;
   margin-left:-5px;
+  display:flex;
+  justify-content:center;
 }
 
 .markers {
@@ -1749,7 +1752,7 @@ h3 {
   #gymCards {
     flex-direction: column;
     max-height: 800px;
-    width: 400px;
+    width: 300px;
   }
 
   .gymInfo {
